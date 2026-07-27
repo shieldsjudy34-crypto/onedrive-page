@@ -15,8 +15,9 @@
     --ms-color-error-bg: #fde7e9;
     --ms-color-text: #201f1e;
     --ms-color-text-secondary: #605e5c;
-    --ms-color-bg: #faf9f8;
+    --ms-color-bg: #f2f2f2;   /* matches Microsoft .background exactly */
     --ms-color-card-bg: #ffffff;
+    --ms-color-card-shadow: 0 2px 6px rgba(0,0,0,0.2);   /* matches Microsoft .inner shadow */
     --ms-color-border: #edebe9;
     --ms-color-divider: #f3f2f1;
   }
@@ -98,9 +99,12 @@
   .card {
     background-color: var(--ms-color-card-bg);
     width: 100%;
-    max-width: 608px;   /* SharePoint actual card width */
-    padding: 36px 40px;
-    border: 1px solid var(--ms-color-border);
+    max-width: 440px;            /* Microsoft .inner/.sign-in-box actual width */
+    min-width: 320px;             /* Microsoft .inner min-width */
+    min-height: 338px;            /* Microsoft .inner min-height */
+    padding: 44px;                /* Microsoft .inner uniform padding */
+    margin-bottom: 28px;
+    box-shadow: var(--ms-color-card-shadow);   /* 0 2px 6px rgba(0,0,0,0.2) */
   }
 
   /* ── Error icon (SharePoint style: red circle with ! ) ── */
